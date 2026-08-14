@@ -2,6 +2,8 @@
 
 API .NET de pagamentos com autenticação/autorização via Keycloak (OIDC), construída em **DDD**, **TDD**, **Arquitetura Hexagonal (Ports & Adapters)** e executada em **containers** (Docker).
 
+Repositório: https://github.com/Edilsonss123/autorizacao-autenticacao
+
 ## Stack
 
 - .NET / ASP.NET Core
@@ -10,6 +12,37 @@ API .NET de pagamentos com autenticação/autorização via Keycloak (OIDC), con
 - Domain-Driven Design
 - Test-Driven Development
 - Arquitetura Hexagonal (Ports & Adapters)
+
+## Desenvolvimento guiado por OpenSpec
+
+A criação deste projeto é guiada pelo **[OpenSpec](https://github.com/Fission-AI/OpenSpec)**: nada é implementado sem antes existir uma proposta e uma spec revisadas. Guia oficial: [Getting Started](https://github.com/Fission-AI/OpenSpec/blob/main/docs/getting-started.md).
+
+As regras específicas deste repositório (idioma, arquitetura, TDD, etc.) estão em [`AGENTS.md`](AGENTS.md) e [`docs/arquitetura.md`](docs/arquitetura.md) — o OpenSpec sempre as considera (ver `openspec/config.yaml`).
+
+### Fluxo de criação de uma mudança
+
+```text
+/opsx:explore   (opcional — pensar na ideia antes de propor)
+/opsx:propose   (a IA cria proposta + specs + design + tasks)
+/opsx:apply     (a IA implementa as tasks)
+/opsx:archive   (specs mescladas em openspec/specs/, change arquivada)
+```
+
+Comandos `/opsx:...` são digitados no chat com o assistente de IA. Comandos `openspec ...` são digitados no terminal.
+
+### Principais comandos
+
+| Comando | Onde | O que faz |
+|---|---|---|
+| `openspec init` | terminal | Inicializa o OpenSpec no projeto |
+| `/opsx:explore` | chat | Explora uma ideia antes de propor uma mudança |
+| `/opsx:propose <nome>` | chat | Cria a proposta, specs, design e tasks de uma mudança |
+| `/opsx:apply` | chat | Implementa as tasks da mudança |
+| `/opsx:archive` | chat | Mescla as specs e arquiva a mudança concluída |
+| `openspec list` | terminal | Lista as mudanças ativas |
+| `openspec show <nome>` | terminal | Mostra os detalhes de uma mudança |
+| `openspec validate <nome>` | terminal | Valida a formatação das specs |
+| `openspec view` | terminal | Abre o dashboard interativo |
 
 ## Documentação
 
