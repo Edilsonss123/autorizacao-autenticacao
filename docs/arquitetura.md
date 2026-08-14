@@ -37,3 +37,34 @@ src/
 
 - Validação de entrada (requests, DTOs) usa **FluentValidation**.
 - Validators ficam próximos ao adapter que os usa (ex.: junto aos endpoints em `Api/`), não no Domain — o Domain garante seus próprios invariantes através de suas entidades/Value Objects, independente de qualquer biblioteca de validação.
+
+## Keycloak
+
+A configuração do Realm `pagamentos` (Clients, Client Roles, Client Scopes, Audience Mapper, usuário e grupo de teste) é declarativa e versionada em `containers/config/keycloak/realm-export.json`. O `containers/docker-compose.yml` importa esse arquivo automaticamente (`start-dev --import-realm`), então `docker compose -f containers/docker-compose.yml up -d` já sobe com o Realm pronto, sem passos manuais no Admin Console.
+
+O Admin Console (`http://localhost:7050`, usuário/senha `admin`/`admin` em ambiente de laboratório) pode ser usado para inspecionar ou ajustar a configuração, mas **o arquivo versionado é a fonte de verdade**. Qualquer alteração feita pelo Admin Console precisa ser refletida de volta no `realm-export.json` antes de ser considerada concluída.
+
+### Como reexportar o Realm após uma alteração manual
+
+O `kc.sh export` não roda com o servidor ativo (ele acessa o banco H2 diretamente), então:
+
+```bash
+# 1. Parar o Keycloak (a alteração feita via Admin Console já está persistida no volume)
+docker compose -f containers/docker-compose.yml stop keycloak
+
+# 2. Exportar o realm 'pagamentos' usando a mesma imagem, contra o mesmo volume de dados
+docker run --rm \
+  -v "$(pwd)/containers/data/keycloak:/opt/keycloak/data" \
+  -v "$(pwd)/containers/keycloak-export:/tmp/kc-export" \
+  quay.io/keycloak/keycloak:26.7.1 \
+  export --dir /tmp/kc-export --realm pagamentos --users realm_file
+
+# 3. Substituir o arquivo versionado e limpar o diretório temporário
+cp containers/keycloak-export/pagamentos-realm.json containers/config/keycloak/realm-export.json
+rm -rf containers/keycloak-export
+
+# 4. Subir o Keycloak novamente
+docker compose -f containers/docker-compose.yml up -d
+```
+
+Segredos de Client (`parceiro-job`) e a senha do usuário de teste (`joao`) usados no laboratório são valores fixos de desenvolvimento, nunca reaproveitáveis em produção.
