@@ -41,4 +41,4 @@
 
 - [x] 7.1 Rodar toda a suíte de testes (`Domain.Tests`, `Application.Tests`) via container/`dotnet test`, confirmando que nada quebrou
 - [x] 7.2 Rodar code-review nas mudanças pendentes antes de qualquer commit
-- [ ] 7.3 Abrir o PR conforme o fluxo issue-driven (sincronização das specs principais fica para o `/opsx:archive`, após o merge, seguindo o padrão já usado nas mudanças anteriores deste repositório)
+- [x] 7.3 Abrir o PR conforme o fluxo issue-driven (sincronização das specs principais fica para o `/opsx:archive`, após o merge, seguindo o padrão já usado nas mudanças anteriores deste repositório) — PR #8
