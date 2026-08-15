@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="AutorizacaoAutenticacao.Api/AutorizacaoAutenticacao.Api.csproj" />
+  <Project Path="AutorizacaoAutenticacao.Application.Tests/AutorizacaoAutenticacao.Application.Tests.csproj" />
+  <Project Path="AutorizacaoAutenticacao.Application/AutorizacaoAutenticacao.Application.csproj" />
+  <Project Path="AutorizacaoAutenticacao.Domain.Tests/AutorizacaoAutenticacao.Domain.Tests.csproj" />
+  <Project Path="AutorizacaoAutenticacao.Domain/AutorizacaoAutenticacao.Domain.csproj" />
+  <Project Path="AutorizacaoAutenticacao.Infrastructure.Tests/AutorizacaoAutenticacao.Infrastructure.Tests.csproj" />
+  <Project Path="AutorizacaoAutenticacao.Infrastructure/AutorizacaoAutenticacao.Infrastructure.csproj" />
+</Solution>

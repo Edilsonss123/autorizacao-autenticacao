@@ -1,0 +1,7 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\AutorizacaoAutenticacao.Domain\AutorizacaoAutenticacao.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
