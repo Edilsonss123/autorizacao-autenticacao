@@ -76,9 +76,9 @@ Convenção:
 
 ## Parte 9 — Application (casos de uso e ports)
 
-- [ ] Definir os ports (`IPagamentoRepository`, `ICallerContext`, etc.) em `Application`
-- [ ] Implementar os casos de uso: `ConsultarPagamentos`, `CriarPagamento`, `CancelarPagamento`
-- [ ] Testes de aplicação com fakes/in-memory para os ports (sem infraestrutura real)
+- [x] Definir os ports (`IPagamentoRepository`, `ICallerContext`, etc.) em `Application`
+- [x] Implementar os casos de uso: `ConsultarPagamentos`, `CriarPagamento`, `CancelarPagamento`
+- [x] Testes de aplicação com fakes/in-memory para os ports (sem infraestrutura real)
 
 
 
