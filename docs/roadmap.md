@@ -62,15 +62,15 @@ Convenção:
 
 ## Parte 7 — Estrutura da solução .NET
 
-- [ ] Aplicar o change `openspec/changes/scaffold-estrutura-solucao` (solution `.slnx`, projetos `Domain`/`Application`/`Infrastructure`/`Api` + respectivos `.Tests`, referências na direção correta) — já proposto, falta aplicar via `/opsx:apply`
+- [x] Aplicar o change `openspec/changes/scaffold-estrutura-solucao` (solution `.slnx`, projetos `Domain`/`Application`/`Infrastructure`/`Api` + respectivos `.Tests`, referências na direção correta) — já proposto, falta aplicar via `/opsx:apply`
 
 
 
 ## Parte 8 — Domain (DDD + TDD)
 
-- [ ] Modelar a entidade `Pagamento` e Value Objects necessários (valor monetário, status, etc.), sem depender de nenhuma outra camada
-- [ ] Implementar regras de negócio: criação, cancelamento (ex.: só cancela se `Status == Pendente`), invariantes do agregado
-- [ ] Escrever os testes de domínio antes da implementação (`AutorizacaoAutenticacao.Domain.Tests`)
+- [x] Modelar a entidade `Pagamento` e Value Objects necessários (valor monetário, status, etc.), sem depender de nenhuma outra camada
+- [x] Implementar regras de negócio: criação, cancelamento (ex.: só cancela se `Status == Pendente`), invariantes do agregado
+- [x] Escrever os testes de domínio antes da implementação (`AutorizacaoAutenticacao.Domain.Tests`)
 
 
 
