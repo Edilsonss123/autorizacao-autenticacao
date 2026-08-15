@@ -1,13 +1,18 @@
+using AutorizacaoAutenticacao.Domain.Excecoes;
+
 namespace AutorizacaoAutenticacao.Domain;
 
 public sealed class Pagamento
 {
+    public Guid Id { get; }
+
     public ValorMonetario Valor { get; }
 
     public StatusPagamento Status { get; private set; }
 
     private Pagamento(ValorMonetario valor)
     {
+        Id = Guid.NewGuid();
         Valor = valor;
         Status = StatusPagamento.Pendente;
     }

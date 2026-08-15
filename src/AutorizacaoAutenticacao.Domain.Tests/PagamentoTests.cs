@@ -1,3 +1,5 @@
+using AutorizacaoAutenticacao.Domain.Excecoes;
+
 namespace AutorizacaoAutenticacao.Domain.Tests;
 
 public class PagamentoTests
@@ -9,6 +11,23 @@ public class PagamentoTests
 
         Assert.Equal(StatusPagamento.Pendente, pagamento.Status);
         Assert.Equal(10m, pagamento.Valor.Montante);
+    }
+
+    [Fact]
+    public void Criar_ComMontanteValido_AtribuiIdDiferenteDeGuidEmpty()
+    {
+        var pagamento = Pagamento.Criar(10m);
+
+        Assert.NotEqual(Guid.Empty, pagamento.Id);
+    }
+
+    [Fact]
+    public void Criar_ChamadoDuasVezes_ResultaEmIdsDistintos()
+    {
+        var primeiro = Pagamento.Criar(10m);
+        var segundo = Pagamento.Criar(10m);
+
+        Assert.NotEqual(primeiro.Id, segundo.Id);
     }
 
     [Fact]
