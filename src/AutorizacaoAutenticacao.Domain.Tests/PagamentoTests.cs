@@ -12,6 +12,23 @@ public class PagamentoTests
     }
 
     [Fact]
+    public void Criar_ComMontanteValido_AtribuiIdDiferenteDeGuidEmpty()
+    {
+        var pagamento = Pagamento.Criar(10m);
+
+        Assert.NotEqual(Guid.Empty, pagamento.Id);
+    }
+
+    [Fact]
+    public void Criar_ChamadoDuasVezes_ResultaEmIdsDistintos()
+    {
+        var primeiro = Pagamento.Criar(10m);
+        var segundo = Pagamento.Criar(10m);
+
+        Assert.NotEqual(primeiro.Id, segundo.Id);
+    }
+
+    [Fact]
     public void Criar_ComValorZero_LancaExcecaoDeDominio()
     {
         Assert.Throws<ValorMonetarioInvalidoException>(() => Pagamento.Criar(0m));
