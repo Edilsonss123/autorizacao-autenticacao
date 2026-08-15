@@ -71,3 +71,7 @@ Thumbs.db
 
 containers/data/*
 !containers/data/.gitkeep
+
+## Configuração local de agentes de IA (permissões específicas da máquina/usuário)
+
+.claude/settings.local.json

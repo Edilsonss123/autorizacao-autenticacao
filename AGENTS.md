@@ -8,6 +8,8 @@ Tudo neste repositório é escrito em português: comunicação, documentação,
 
 Exceção: termos e padrões amplamente adotados na indústria/na linguagem permanecem em inglês — por exemplo `Repository`, `Handler`, `Service`, `Controller`, `DTO`, `Factory`, `Builder`, palavras-chave da linguagem (`async`/`await`, `class`, `interface`), tipos do framework (`Guid`, `Task`, `CancellationToken`) e claims/termos de protocolo (`sub`, `azp`, `aud`, `Bearer`). Na dúvida, prefira português.
 
+Exceção adicional: arquivos gerados/vendorizados por ferramentas de terceiros (ex.: os mirrors de skills/commands do `openspec` CLI em `.agents/`, `.claude/skills/openspec-*`, `.claude/commands/opsx/`, `.cursor/`) permanecem no idioma original gerado pela ferramenta — traduzi-los manualmente quebraria a regeneração automática. Isso não se aplica a nada escrito por um agente ou humano deste projeto.
+
 Exemplo:
 ```csharp
 public sealed class CancelarPagamentoCasoDeUso
