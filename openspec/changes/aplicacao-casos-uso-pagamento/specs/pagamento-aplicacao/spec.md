@@ -5,7 +5,7 @@ Orquestra o agregado `Pagamento` do Domain por meio de casos de uso (consultar, 
 ## ADDED Requirements
 
 ### Requirement: Port de persistência de Pagamento
-A Application SHALL definir um port de persistência que permite salvar um `Pagamento`, buscar um `Pagamento` pelo seu `Id` e listar todos os `Pagamento` existentes, sem expor nenhum detalhe de armazenamento aos casos de uso.
+A Application SHALL definir um port de persistência que permite salvar um novo `Pagamento`, atualizar um `Pagamento` existente, buscar um `Pagamento` pelo seu `Id` e listar todos os `Pagamento` existentes, sem expor nenhum detalhe de armazenamento aos casos de uso. A atualização é uma operação explícita do port — uma transição de estado no agregado (ex.: cancelamento) só é considerada persistida depois de passar por ela, independentemente de qualquer implementação de repositório reter ou não a mesma referência de objeto em memória.
 
 #### Scenario: Busca por Id inexistente
 - **WHEN** um caso de uso solicita ao repositório um `Pagamento` por um `Id` que não existe

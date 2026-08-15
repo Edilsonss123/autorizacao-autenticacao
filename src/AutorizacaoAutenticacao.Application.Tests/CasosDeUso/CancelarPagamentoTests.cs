@@ -1,6 +1,10 @@
+using AutorizacaoAutenticacao.Application.CasosDeUso;
+using AutorizacaoAutenticacao.Application.Excecoes;
+using AutorizacaoAutenticacao.Application.Tests.Fakes;
 using AutorizacaoAutenticacao.Domain;
+using AutorizacaoAutenticacao.Domain.Excecoes;
 
-namespace AutorizacaoAutenticacao.Application.Tests;
+namespace AutorizacaoAutenticacao.Application.Tests.CasosDeUso;
 
 public class CancelarPagamentoTests
 {

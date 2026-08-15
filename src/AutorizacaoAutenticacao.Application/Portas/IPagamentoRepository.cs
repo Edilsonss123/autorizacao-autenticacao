@@ -1,6 +1,6 @@
 using AutorizacaoAutenticacao.Domain;
 
-namespace AutorizacaoAutenticacao.Application;
+namespace AutorizacaoAutenticacao.Application.Portas;
 
 public interface IPagamentoRepository
 {

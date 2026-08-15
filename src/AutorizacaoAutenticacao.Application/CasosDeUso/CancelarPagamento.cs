@@ -1,4 +1,7 @@
-namespace AutorizacaoAutenticacao.Application;
+using AutorizacaoAutenticacao.Application.Excecoes;
+using AutorizacaoAutenticacao.Application.Portas;
+
+namespace AutorizacaoAutenticacao.Application.CasosDeUso;
 
 public sealed class CancelarPagamento(IPagamentoRepository pagamentoRepository)
 {

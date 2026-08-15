@@ -1,4 +1,4 @@
-namespace AutorizacaoAutenticacao.Domain;
+namespace AutorizacaoAutenticacao.Domain.Excecoes;
 
 public sealed class ValorMonetarioInvalidoException : DomainException
 {

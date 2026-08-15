@@ -1,6 +1,7 @@
+using AutorizacaoAutenticacao.Application.Portas;
 using AutorizacaoAutenticacao.Domain;
 
-namespace AutorizacaoAutenticacao.Application;
+namespace AutorizacaoAutenticacao.Application.CasosDeUso;
 
 public sealed class CriarPagamento(IPagamentoRepository pagamentoRepository)
 {

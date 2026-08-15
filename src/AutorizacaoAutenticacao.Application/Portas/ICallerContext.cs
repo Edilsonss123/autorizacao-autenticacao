@@ -1,4 +1,4 @@
-namespace AutorizacaoAutenticacao.Application;
+namespace AutorizacaoAutenticacao.Application.Portas;
 
 public interface ICallerContext
 {

@@ -1,6 +1,8 @@
+using AutorizacaoAutenticacao.Application.CasosDeUso;
+using AutorizacaoAutenticacao.Application.Tests.Fakes;
 using AutorizacaoAutenticacao.Domain;
 
-namespace AutorizacaoAutenticacao.Application.Tests;
+namespace AutorizacaoAutenticacao.Application.Tests.CasosDeUso;
 
 public class ConsultarPagamentosTests
 {

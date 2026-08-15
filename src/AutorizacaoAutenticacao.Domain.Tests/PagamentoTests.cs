@@ -1,3 +1,5 @@
+using AutorizacaoAutenticacao.Domain.Excecoes;
+
 namespace AutorizacaoAutenticacao.Domain.Tests;
 
 public class PagamentoTests

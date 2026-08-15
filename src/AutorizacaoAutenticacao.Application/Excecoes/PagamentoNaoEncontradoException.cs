@@ -1,4 +1,4 @@
-namespace AutorizacaoAutenticacao.Application;
+namespace AutorizacaoAutenticacao.Application.Excecoes;
 
 public sealed class PagamentoNaoEncontradoException : Exception
 {

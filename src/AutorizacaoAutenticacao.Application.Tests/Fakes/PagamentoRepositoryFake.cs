@@ -1,6 +1,7 @@
+using AutorizacaoAutenticacao.Application.Portas;
 using AutorizacaoAutenticacao.Domain;
 
-namespace AutorizacaoAutenticacao.Application.Tests;
+namespace AutorizacaoAutenticacao.Application.Tests.Fakes;
 
 public sealed class PagamentoRepositoryFake : IPagamentoRepository
 {

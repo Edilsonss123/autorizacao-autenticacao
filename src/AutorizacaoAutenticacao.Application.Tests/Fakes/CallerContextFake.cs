@@ -1,4 +1,6 @@
-namespace AutorizacaoAutenticacao.Application.Tests;
+using AutorizacaoAutenticacao.Application.Portas;
+
+namespace AutorizacaoAutenticacao.Application.Tests.Fakes;
 
 public sealed class CallerContextFake : ICallerContext
 {

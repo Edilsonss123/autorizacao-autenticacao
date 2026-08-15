@@ -1,3 +1,5 @@
+using AutorizacaoAutenticacao.Domain.Excecoes;
+
 namespace AutorizacaoAutenticacao.Domain;
 
 // Não é um record: `with` bypassaria a validação do construtor (ver design.md).
